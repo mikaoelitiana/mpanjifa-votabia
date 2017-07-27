@@ -3,7 +3,7 @@
 // All of the Node.js APIs are available in this process.
 const io = require('socket.io-client');
 
-const socket = io('http://192.168.100.25:8012');
+const socket = io('http://127.0.0.1:8012');
 let currentStatus = "WORK";
 
 socket.on('pomodoro', function(data) {
@@ -12,9 +12,9 @@ socket.on('pomodoro', function(data) {
     switch (data.status) {
       case 'WORK':
         message = 'Let\'s work!!';
-      case 'PAUSE':
+      case 'BREAK':
         message = 'You can have some break';
-      case 'LONG PAUSE':
+      case 'LONG BREAK':
         message = 'It\'s finally the long break time';
     }
     let myNotification = new Notification(data.status, {
