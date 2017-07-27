@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-app-region: drag
+}
+
+#main {
+  height: 100%;
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+
+#timer {
+  height: 100%;
+  font-size: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#status {
+  position: absolute;
+  top: 30px;
+}
+
+.work {
+  background-color: #F44336;
+  transition: background 0.25s ease;
+}
+
+.pause {
+  background-color: #8BC34A;
+  transition: background 0.25s ease;
+}
