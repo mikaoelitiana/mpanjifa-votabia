@@ -4,8 +4,23 @@
 const io = require('socket.io-client');
 
 const socket = io('http://192.168.100.25:8012');
+let currentStatus = "WORK";
 
 socket.on('pomodoro', function(data) {
+  if (currentStatus !== data.status) {
+    currentStatus = data.status;
+    switch (data.status) {
+      case 'WORK':
+        message = 'Let\'s work!!';
+      case 'PAUSE':
+        message = 'You can have some break';
+      case 'LONG PAUSE':
+        message = 'It\'s finally the long break time';
+    }
+    let myNotification = new Notification(data.status, {
+      body: message,
+    });
+  }
   document.getElementById("timer").innerHTML = data.timer;
   document.getElementById("status").innerHTML = data.status;
   if (data.status != 'WORK') {
