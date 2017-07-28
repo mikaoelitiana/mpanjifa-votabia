@@ -21,8 +21,11 @@ socket.on('pomodoro', function(data) {
       body: message,
     });
   }
+
   document.getElementById("timer").innerHTML = data.timer;
   document.getElementById("status").innerHTML = data.status;
+  document.getElementById("round").innerHTML = '#' + data.round;
+
   if (data.status != 'WORK') {
     document.getElementById("main").className = "pause";
   } else {
