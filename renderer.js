@@ -33,8 +33,7 @@ socket.on('pomodoro', function(data) {
         break;
     }
     let myNotification = new Notification(data.status, {
-      body: message,
-      icon: './big_tomato.png'
+      body: message
     });
     currentWindow.show();
   }
