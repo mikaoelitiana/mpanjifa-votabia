@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "kilia-votabia",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "UI client for votabia pomodoro server",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder -mlw"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
