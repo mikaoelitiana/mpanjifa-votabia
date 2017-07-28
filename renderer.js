@@ -7,7 +7,7 @@ const currentWindow = remote.getCurrentWindow();
 // TODO: move this to settings
 const socket = io('http://192.168.22.36:8012/');
 
-let tray = new remote.Tray('./tomato.png');
+let tray = new remote.Tray(__dirname + '/tomato.png');
 let currentStatus = "WORK";
 
 window.addEventListener('beforeunload', function(){

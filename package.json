@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -mlw"
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "postinstall": "electron-builder install-app-deps",
@@ -30,6 +30,6 @@
     "appId": "tagip.votabia",
     "mac": {
       "category": "productivity"
-    }
+    },
   }
 }
