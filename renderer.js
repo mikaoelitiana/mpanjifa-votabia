@@ -26,10 +26,10 @@ socket.on('pomodoro', function(data) {
         message = 'Let\'s work!!';
         break;
       case 'BREAK':
-        message = 'You can have some break';
+        message = 'You can have some rest.';
         break;
       case 'LONG BREAK':
-        message = 'It\'s finally the long break time';
+        message = 'It\'s finally time for a long break.';
         break;
     }
     let myNotification = new Notification(data.status, {
