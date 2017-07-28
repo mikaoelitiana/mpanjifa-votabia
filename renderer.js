@@ -13,6 +13,10 @@ window.addEventListener('beforeunload', function(){
   tray.destroy();
 });
 
+tray.on('click', function() {
+  currentWindow.show();
+});
+
 socket.on('pomodoro', function(data) {
   if (currentStatus !== data.status) {
     currentStatus = data.status;
