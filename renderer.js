@@ -31,6 +31,9 @@ socket.on('pomodoro', function(data) {
       case 'LONG BREAK':
         message = 'It\'s finally time for a long break.';
         break;
+      case 'STOP':
+        message = 'Just stop.';
+        break;
     }
     let myNotification = new Notification(data.status, {
       body: message
