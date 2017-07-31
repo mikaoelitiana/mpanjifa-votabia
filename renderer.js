@@ -5,7 +5,7 @@ const io = require('socket.io-client');
 const { app, remote, BrowserWindow } = require('electron');
 const currentWindow = remote.getCurrentWindow();
 // TODO: move this to settings
-const socket = io('http://192.168.22.36:8012/');
+const socket = io('http://192.168.22.20:8012/');
 
 let tray = new remote.Tray(__dirname + '/tomato.png');
 let currentStatus = "WORK";
