@@ -2,10 +2,12 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const io = require('socket.io-client');
-const { app, remote, BrowserWindow } = require('electron');
+const { remote } = require('electron');
+const settings = require('electron-settings');
 const currentWindow = remote.getCurrentWindow();
-// TODO: move this to settings
-const socket = io('https://votabia-lxjgfxtqoa.now.sh');
+
+const server = settings.get('server', 'https://votabia-lxjgfxtqoa.now.sh');
+const socket = io(server);
 
 let tray = new remote.Tray(__dirname + '/tomato.png');
 let currentStatus = "WORK";
