@@ -40,7 +40,6 @@ socket.on('pomodoro', function(data) {
     let myNotification = new Notification(data.status, {
       body: message
     });
-    currentWindow.show();
   }
 
   document.getElementById("timer").innerHTML = data.timer;
