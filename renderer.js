@@ -6,7 +6,7 @@ const { remote } = require('electron');
 const settings = require('electron-settings');
 const currentWindow = remote.getCurrentWindow();
 
-const server = settings.get('server', 'https://votabia-lxjgfxtqoa.now.sh');
+const server = settings.get('server', 'https://eu-votabia.now.sh');
 const socket = io(server);
 
 let tray = new remote.Tray(__dirname + '/tomato.png');
